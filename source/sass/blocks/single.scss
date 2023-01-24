@@ -1,0 +1,27 @@
+.betslip__reckoning {
+  margin-top: 14px;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.betslip__calculation {
+  margin-bottom: 8px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.betslip__calcInfo {
+  font-size: 13px;
+  font-weight: normal;
+  color: var(--pmbet-gray);
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+}

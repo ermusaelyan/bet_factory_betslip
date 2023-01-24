@@ -1,0 +1,12 @@
+/* global style */
+@import "normalize";
+@import "variable.scss";
+@import "fonts.scss";
+@import "global.scss";
+@import "core.scss";
+
+//blocks
+@import "./blocks/single";
+@import "./blocks/multi";
+@import "./blocks/system";
+

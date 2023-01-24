@@ -1,0 +1,343 @@
+.wrapper {
+  position: fixed;
+  top: 10px;
+  left: 10%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.betslip-wrapper {
+  width: 324px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    width: 414px;
+   margin-bottom: 20px;
+  }
+}
+
+.name {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.betslip__footer {
+  padding: 9px 12px 13px;
+  width: 100%;
+  background-color: var(--pmbet-cream);
+  box-shadow: 0 0 5px var(--pmbet-black-1);
+
+  @media screen and (max-width: 768px) {
+    padding: 6px 17px 15px;
+  }
+}
+
+.betslip__units {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.betslipUnits__choice {
+  padding-right: 6px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--pmbet-cream);
+}
+
+.betslip__minBet {
+  width: calc(100% - 72px);
+  padding-left: 8px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: var(--pmbet-white);
+
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 92px);
+    height: 32px;
+  }
+}
+
+.betslipUnits__text {
+  margin-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--pmbet-gray-7);
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+
+//=============== Switcher Styles===============
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 16px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--pmbet-cream);
+  -webkit-transition: var(--pmbet-transition);
+  transition: var(--pmbet-transition);
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 0;
+    background-color: var(--pmbet-gray-lighter--2);
+    -webkit-transition: var(--pmbet-transition);
+    transition: var(--pmbet-transition);
+  }
+}
+
+
+input:checked + .slider {
+  background-color: var(--pmbet-cream);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--pmbet-gray-lighter--2);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+  background-color: var(--pmbet-green);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 18px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+//=============== Switcher Styles ===============
+
+
+
+.betslip__bet, .betslipBetLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.betslipBet__input {
+  width: 100%;
+  padding: 0 7px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--pmbet-gray-7);
+  border: none;
+  outline: none;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+
+
+  &::placeholder {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--pmbet-gray-extralight);
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.betslip__maxBet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.betslipMaxBetButton {
+  width: 72px;
+  height: 26px;
+  text-align: center;
+  background-color: var(--pmbet-green);
+  border: none;
+  outline: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--pmbet-white);
+  text-transform: uppercase;
+
+  @media screen and (max-width: 768px) {
+    width: 92px;
+    height: 32px;
+    font-size: 13px;
+  }
+}
+
+.betslip__possibleWin {
+  margin: 11px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.betslip__possibleWinInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.betslip__possibleWinIcon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.betslip__possibleWinInfoSVG {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.betslip__possibleWinText {
+  cursor: default;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--pmbet-gray);
+  text-transform: capitalize;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.betslip__possibleWinSum {
+  cursor: default;
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--pmbet-green);
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--pmbet-gray);
+    text-transform: uppercase;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.betslip__betting {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.betslip__fastBet, .betslip__placeBet {
+  width: calc(50% - 5px);
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    width: calc(50% - 10px);
+    height: 44px;
+  }
+}
+
+.betslip__fastBet {
+  margin-right: 10px;
+
+  @media screen and (max-width: 768px) {
+    margin-right: 20px;
+  }
+}
+
+.betslip__fastBetButton, .betslip__placeBetButton {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(255, 255, 253);
+  text-transform: uppercase;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    border-radius: 8px;
+    font-size: 18px;
+  }
+}
+
+.betslip__fastBetButton {
+  background-color: var(--pmbet-gray-light);
+
+  @media screen and (max-width: 768px) {
+    color: var(--pmbet-gray-light);
+    background-color: var(--pmbet-white);
+  }
+}
+
+.betslip__placeBetButton {
+  background-color: var(--pmbet-green)
+}

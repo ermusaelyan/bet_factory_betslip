@@ -1,0 +1,102 @@
+.betslip__select {
+  margin-top: 5px;
+  width: 100%;
+  position: relative;
+}
+
+.betslip__selectHead {
+  padding: 0 2px 0 0;
+  width: 100%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: var(--pmbet-white);
+}
+
+.betslip__option {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 6px;
+}
+
+.betslip__optionName {
+  font-size: 13px;
+  font-weight: normal;
+  color: var(--pmbet-gray);
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.betslip__optionCount {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--pmbet-gray);
+
+  span {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 17px;
+  }
+}
+
+.betslipSelect__Open {
+  margin-left: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.betslipSelectOpen__Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  svg {
+    width: 18px;
+    height: 10px;
+    object-position: center;
+    object-fit: contain;
+    fill: var(--pmbet-green);
+  }
+}
+
+.betslip__selectBody {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: var(--pmbet-white);
+  cursor: pointer;
+
+  .betslip__option {
+    transition: 0.1s;
+
+    &:hover {
+      background-color: var(--pmbet-green);
+
+      .betslip__optionName, .betslip__optionCount {
+        color: var(--pmbet-white);
+      }
+    }
+  }
+}
+
+.betslip__select.open {
+  .betslip__selectBody {
+    display: block;
+  }
+}
